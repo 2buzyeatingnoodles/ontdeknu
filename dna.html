@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNA — Ontdek</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">ONTDEK</div>
+        <div class="punten">
+    <span id="puntenTeller">⭐ 0 punten</span>
+    <span id="levelTeller">🌱 Nieuwsgierig</span>
+</div>
+
+<div id="puntenTeller">⭐ 0 punten</div>
+
+        <nav>
+            <a href="ruimtevaart.html">Ruimtevaart</a>
+            <a href="geschiedenis.html">Geschiedenis</a>
+            <a href="wetenschap.html">Wetenschap</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <p class="boven-titel">WETENSCHAP — LES 01</p>
+
+            <h1>DNA:<br><span>de code van jou.</span></h1>
+
+            <p class="intro">
+                Je draagt een enorme hoeveelheid informatie met je mee.
+                En het zit bijna overal in je lichaam.
+            </p>
+
+        </section>
+
+
+        <section class="onderwerpen">
+
+            <div class="sectie-titel">
+                <p>5 FEITEN</p>
+                <h2>DNA is<br>best bizar.</h2>
+            </div>
+
+
+            <div class="les-tekst">
+
+                <h3>01 — Je DNA is gigantisch lang</h3>
+
+                <p>
+                    Als je al het DNA uit één menselijke cel uitrekt,
+                    is het ongeveer <strong>2 meter lang</strong>.
+                </p>
+
+
+                <h3>02 — Bijna iedereen heeft hetzelfde DNA</h3>
+
+                <p>
+                    Mensen delen ongeveer <strong>99,9%</strong> van hun DNA.
+                    Die kleine verschillen maken ons toch uniek.
+                </p>
+
+
+                <h3>03 — Je lichaam kopieert DNA</h3>
+
+                <p>
+                    Wanneer een cel zich deelt, moet het DNA eerst worden
+                    gekopieerd zodat beide nieuwe cellen een volledige
+                    set genetische informatie krijgen.
+                </p>
+
+
+                <h3>04 — Je hebt DNA van je ouders</h3>
+
+                <p>
+                    Ongeveer de helft van je DNA komt van je moeder
+                    en de andere helft van je vader.
+                </p>
+
+
+                <h3>05 — DNA zit niet alleen bij mensen</h3>
+
+                <p>
+                    Bijna alle levende organismen gebruiken DNA om
+                    genetische informatie op te slaan.
+                    Van bacteriën tot bomen en dieren.
+                </p>
+
+            </div>
+
+
+            <div class="quiz">
+
+                <h3>🧠 Snelle test</h3>
+
+                <p>
+                    <strong>Hoe lang is het DNA in één menselijke cel
+                    ongeveer als je het uitrekt?</strong>
+                </p>
+
+                <button onclick="antwoord(false, 'r1', this)">
+                    A — 2 millimeter
+                </button>
+
+                <button onclick="antwoord(true, 'r1', this, 'dna-vraag-1'); verdienPunten(10)">
+                    B — 2 meter
+                </button>
+
+                <button onclick="antwoord(false, 'r1', this)">
+                    C — 2 kilometer
+                </button>
+
+                <p id="r1"></p>
+
+            </div>
+
+
+            <br><br>
+
+            <a href="wetenschap.html" class="start-knop">
+                ← Terug naar wetenschap
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <strong>ONTDEK</strong>
+        <p>Leer iets. Begrijp meer.</p>
+    </footer>
+
+
+    <script>
+
+        function antwoord(goed, id, knop) {
+
+    const resultaat = document.getElementById(id);
+
+    if (resultaat.dataset.beantwoord === "true") {
+        return;
+    }
+
+    resultaat.dataset.beantwoord = "true";
+
+    const knoppen = knop.parentElement.querySelectorAll("button");
+
+    knoppen.forEach(function (button) {
+        button.disabled = true;
+    });
+
+    if (goed) {
+        resultaat.textContent = "✓ Juist. +10 punten!";
+    } else {
+        resultaat.textContent = "✗ Nope. Geen punten.";
+    }
+}
+
+    </script>
+
+    <script src="punten.js"></script>
+
+</body>
+</html>

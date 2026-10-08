@@ -1,0 +1,121 @@
+```html
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meteoren en meteorieten — Ontdek</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <a href="index.html" class="logo">ONTDEK</a>
+
+        <nav>
+            <a href="ruimtevaart.html">Ruimtevaart</a>
+            <a href="geschiedenis.html">Geschiedenis</a>
+            <a href="wetenschap.html">Wetenschap</a>
+        </nav>
+
+        <div class="punten">
+            <span id="puntenTeller">⭐ 0 punten</span>
+            <span id="levelTeller">🌱 Nieuwsgierig</span>
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="onderwerpen">
+
+            <div class="sectie-titel">
+                <p>RUIMTEVAART — LES 06</p>
+
+                <h1>🌠 Meteoren en meteorieten</h1>
+            </div>
+
+            <div class="les-tekst">
+
+                <h3>De lichtflitsen aan de nachtelijke hemel</h3>
+
+                <p>
+                    In de ruimte zweven enorme hoeveelheden kleine stukken steen
+                    en metaal. Zo'n stuk noemen we een meteoroïde.
+                </p>
+
+                <p>
+                    Wanneer zo'n stuk met hoge snelheid de atmosfeer van de aarde
+                    binnendringt, wordt het extreem heet. Daardoor ontstaat een
+                    heldere lichtstreep aan de hemel. Dat noemen we een meteoor.
+                </p>
+
+                <p>
+                    Soms overleeft een deel van het object de reis door de
+                    atmosfeer en valt het op de aarde. Dan noemen we het een
+                    meteoriet.
+                </p>
+
+                <h3>⚡ In 1 minuut geleerd</h3>
+
+                <p>
+                    ☄️ Meteoroïde = stuk steen of metaal in de ruimte<br>
+                    🌠 Meteoor = lichtstreep in onze atmosfeer<br>
+                    🪨 Meteoriet = stuk dat de aarde bereikt<br>
+                    🌍 De aarde krijgt regelmatig kleine ruimtebrokjes binnen<br>
+                    🔥 De meeste verbranden voordat ze de grond bereiken
+                </p>
+
+            </div>
+
+            <div class="quiz">
+
+                <h3>🧠 Quiz</h3>
+
+                <p>
+                    Hoe noemen we een stuk ruimtegesteente dat de aarde bereikt?
+                </p>
+
+                <div class="vraag">
+
+                    <button onclick="antwoord(false, 'resultaat6', this)">
+                        A. Een meteoor
+                    </button>
+
+                    <button onclick="antwoord(true, 'resultaat6', this); verdienPunten(10, 'meteoren-quiz')">
+                        B. Een meteoriet
+                    </button>
+
+                    <button onclick="antwoord(false, 'resultaat6', this)">
+                        C. Een pulsar
+                    </button>
+
+                    <p id="resultaat6"></p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <strong>ONTDEK</strong>
+
+        <p>Leer iets. Begrijp meer.</p>
+
+    </footer>
+
+    <script src="punten.js"></script>
+
+</body>
+
+</html>
+```

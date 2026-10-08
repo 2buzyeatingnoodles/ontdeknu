@@ -1,0 +1,120 @@
+```html
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>De ringen van Saturnus — Ontdek</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <a href="index.html" class="logo">ONTDEK</a>
+
+        <nav>
+            <a href="ruimtevaart.html">Ruimtevaart</a>
+            <a href="geschiedenis.html">Geschiedenis</a>
+            <a href="wetenschap.html">Wetenschap</a>
+        </nav>
+
+        <div class="punten">
+            <span id="puntenTeller">⭐ 0 punten</span>
+            <span id="levelTeller">🌱 Nieuwsgierig</span>
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="onderwerpen">
+
+            <div class="sectie-titel">
+                <p>RUIMTEVAART — LES 05</p>
+
+                <h1>🪐 De ringen van Saturnus</h1>
+            </div>
+
+            <div class="les-tekst">
+
+                <h3>Een planeet met een gigantische ring</h3>
+
+                <p>
+                    Saturnus is een enorme gasplaneet en staat bekend om zijn
+                    spectaculaire ringen. Maar die ringen zijn geen massieve schijf.
+                </p>
+
+                <p>
+                    Ze bestaan uit miljarden stukken ijs en steen. Sommige stukjes
+                    zijn piepklein, terwijl andere meters groot kunnen zijn.
+                </p>
+
+                <p>
+                    De ringen zijn enorm breed, maar op sommige plekken zijn ze
+                    verrassend dun. Door de zwaartekracht van Saturnus en zijn
+                    manen blijven de deeltjes in hun banen rond de planeet.
+                </p>
+
+                <h3>⚡ In 1 minuut geleerd</h3>
+
+                <p>
+                    🪐 Saturnus is een gasplaneet<br>
+                    🧊 De ringen bestaan vooral uit ijs en steen<br>
+                    💫 De ringen bestaan uit miljarden deeltjes<br>
+                    🌙 Manen helpen de ringen te beïnvloeden<br>
+                    🔭 Saturnus heeft de bekendste ringen van ons zonnestelsel
+                </p>
+
+            </div>
+
+            <div class="quiz">
+
+                <h3>🧠 Quiz</h3>
+
+                <p>
+                    Waaruit bestaan de ringen van Saturnus vooral?
+                </p>
+
+                <div class="vraag">
+
+                    <button onclick="antwoord(false, 'resultaat5', this)">
+                        A. Alleen uit gas
+                    </button>
+
+                    <button onclick="antwoord(true, 'resultaat5', this); verdienPunten(10, 'saturnus-quiz')">
+                        B. Uit ijs en steen
+                    </button>
+
+                    <button onclick="antwoord(false, 'resultaat5', this)">
+                        C. Uit vloeibaar metaal
+                    </button>
+
+                    <p id="resultaat5"></p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <strong>ONTDEK</strong>
+
+        <p>Leer iets. Begrijp meer.</p>
+
+    </footer>
+
+    <script src="punten.js"></script>
+
+</body>
+
+</html>
+```

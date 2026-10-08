@@ -1,0 +1,410 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0d12;
+    color: white;
+}
+
+header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    border-bottom: 1px solid #252832;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.hero {
+    min-height: 650px;
+    padding: 130px 7% 100px;
+    background: radial-gradient(circle at 70% 30%, #22283a 0%, #0b0d12 45%);
+}
+
+.boven-titel {
+    color: #8d94a6;
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: clamp(55px, 8vw, 110px);
+    line-height: 0.95;
+    margin: 25px 0;
+    letter-spacing: -5px;
+}
+
+h1 span {
+    color: #7f8799;
+}
+
+.intro {
+    max-width: 560px;
+    color: #a7acb8;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.start-knop {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 17px 25px;
+    background: white;
+    color: #0b0d12;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+.start-knop:hover {
+    transform: translateY(-3px);
+}
+
+.onderwerpen {
+    padding: 120px 7%;
+}
+
+.sectie-titel p {
+    color: #777e8e;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.sectie-titel h2 {
+    font-size: 48px;
+    line-height: 1.05;
+    margin-top: 15px;
+}
+
+.kaarten {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 60px;
+}
+
+.kaart {
+    min-height: 430px;
+    padding: 35px;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s;
+}
+
+.kaart:hover {
+    transform: translateY(-10px);
+}
+
+.ruimte {
+    background: linear-gradient(145deg, #17233c, #0d111b);
+}
+
+.geschiedenis {
+    background: linear-gradient(145deg, #33291d, #17130e);
+}
+
+.wetenschap {
+    background: linear-gradient(145deg, #17332e, #0e1816);
+}
+
+.kaart-icoon {
+    font-size: 45px;
+}
+
+.kaart p {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #aaa;
+}
+
+.kaart h3 {
+    font-size: 38px;
+    line-height: 1;
+    margin: 15px 0;
+}
+
+.kaart span {
+    color: #aaa;
+    font-size: 14px;
+}
+
+footer {
+    border-top: 1px solid #252832;
+    padding: 50px 7%;
+    color: #777e8e;
+}
+
+footer strong {
+    color: white;
+    letter-spacing: 3px;
+}
+
+@media (max-width: 800px) {
+
+    header {
+        padding: 0 5%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 100px 5%;
+    }
+
+    .onderwerpen {
+        padding: 80px 5%;
+    }
+
+    .kaarten {
+        grid-template-columns: 1fr;
+    }
+
+    .sectie-titel h2 {
+        font-size: 38px;
+    }
+}
+/* HOME PAGINA */
+
+.logo {
+    color: white;
+    text-decoration: none;
+}
+
+.punten {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 13px;
+    border: 1px solid #292e3a;
+    border-radius: 50px;
+    background: #11141b;
+    color: #a7acb8;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+#puntenTeller {
+    color: white;
+    font-weight: bold;
+}
+
+.hero {
+    position: relative;
+    min-height: 650px;
+    overflow: hidden;
+}
+
+.hero-tekst {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-wereld {
+    position: absolute;
+    right: 7%;
+    top: 80px;
+    width: 360px;
+    height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wereld {
+    font-size: 240px;
+    filter: drop-shadow(0 0 45px rgba(80, 140, 255, 0.25));
+    animation: zweven 5s ease-in-out infinite;
+}
+
+.ster {
+    position: absolute;
+    color: #8c94a8;
+    font-size: 20px;
+}
+
+.ster-1 {
+    top: 20px;
+    left: 50px;
+}
+
+.ster-2 {
+    top: 100px;
+    right: 20px;
+}
+
+.ster-3 {
+    bottom: 50px;
+    left: 30px;
+    font-size: 30px;
+}
+
+.ster-4 {
+    bottom: 20px;
+    right: 70px;
+}
+
+@keyframes zweven {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+}
+
+.kaart-boven {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.kaart {
+    position: relative;
+    overflow: hidden;
+}
+
+.kaart::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    right: -70px;
+    bottom: -70px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+}
+
+@media (max-width: 1000px) {
+
+    .hero-wereld {
+        opacity: 0.35;
+        right: -80px;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    header {
+        padding: 0 5%;
+    }
+
+    .punten {
+        display: none;
+    }
+
+    .hero {
+        padding: 100px 5%;
+    }
+
+    .hero-wereld {
+        display: none;
+    }
+
+}
+.punten {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 8px 14px;
+    border: 1px solid #292e3a;
+    border-radius: 30px;
+    background: #11141b;
+    color: #a7acb8;
+    font-size: 12px;
+}
+
+#puntenTeller {
+    color: white;
+    font-weight: bold;
+}
+.punten {
+    position: relative;
+}
+
+.level-knop {
+    border: none;
+    background: transparent;
+    color: #a7acb8;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.level-knop:hover {
+    color: white;
+}
+
+.levels-menu {
+    display: none;
+    position: absolute;
+    top: 55px;
+    right: 0;
+    width: 230px;
+    padding: 20px;
+    background: #11141b;
+    border: 1px solid #292e3a;
+    border-radius: 15px;
+    z-index: 100;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.levels-menu.zichtbaar {
+    display: block;
+}
+
+.levels-menu h3 {
+    margin-top: 0;
+    color: white;
+}
+
+.levels-menu p {
+    color: #a7acb8;
+    line-height: 1.5;
+    margin: 15px 0;
+}
+
+.levels-menu strong {
+    color: white;
+}
+<script src="punten.js"></script>
+</body>
+</html>

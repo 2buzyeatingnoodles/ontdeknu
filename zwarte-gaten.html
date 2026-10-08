@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zwarte gaten — Ontdek</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <a href="index.html" class="logo">ONTDEK</a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="ruimtevaart.html">Ruimtevaart</a>
+        <a href="geschiedenis.html">Geschiedenis</a>
+        <a href="wetenschap.html">Wetenschap</a>
+    </nav>
+
+    <div class="punten">
+        <span id="puntenTeller">⭐ 0 punten</span>
+        <span id="levelTeller">🌱 Nieuwsgierig</span>
+    </div>
+
+</header>
+
+<main>
+
+<section class="hero">
+
+    <p class="boven-titel">RUIMTEVAART — LES 02</p>
+
+    <h1>
+        Zwarte gaten:<br>
+        <span>waar licht verdwijnt.</span>
+    </h1>
+
+    <p class="intro">
+        Eén van de vreemdste objecten in het heelal.
+        Maar wat gebeurt er eigenlijk bij een zwart gat?
+    </p>
+
+</section>
+
+
+<section class="onderwerpen">
+
+    <div class="sectie-titel">
+        <p>DE LES</p>
+
+        <h2>
+            Een plek waar<br>
+            zwaartekracht wint.
+        </h2>
+    </div>
+
+
+    <div class="les-tekst">
+
+        <h3>🕳️ Wat is een zwart gat?</h3>
+
+        <p>
+            Een zwart gat is een gebied in de ruimtetijd waar de zwaartekracht
+            zo sterk is dat er vanaf een bepaalde grens niets meer kan ontsnappen,
+            zelfs licht niet.
+        </p>
+
+
+        <h3>🌌 De waarnemingshorizon</h3>
+
+        <p>
+            De grens rond een zwart gat wordt de
+            <strong>waarnemingshorizon</strong> genoemd.
+            Zodra iets deze grens passeert, kan het niet meer terug naar buiten.
+        </p>
+
+
+        <h3>⭐ Hoe ontstaat een zwart gat?</h3>
+
+        <p>
+            Sommige zwarte gaten ontstaan wanneer een zeer zware ster aan het
+            einde van zijn leven instort.
+        </p>
+
+        <p>
+            De materie wordt daarbij samengeperst tot een extreem compact object.
+        </p>
+
+
+        <h3>⏱️ Verandert tijd?</h3>
+
+        <p>
+            Volgens Einsteins relativiteitstheorie beïnvloedt sterke zwaartekracht
+            het verloop van tijd. Voor een verre waarnemer lijkt een object dat
+            een zwart gat nadert daardoor steeds langzamer te bewegen.
+        </p>
+
+    </div>
+
+
+    <div class="sectie-titel quiz-titel">
+
+        <p>QUIZ</p>
+
+        <h2>
+            Durf jij<br>
+            de uitdaging aan?
+        </h2>
+
+    </div>
+
+
+    <div class="quiz">
+
+        <!-- VRAAG 1 -->
+
+        <div class="vraag">
+
+            <h3>Vraag 1</h3>
+
+            <p>
+                Waarom kan licht niet ontsnappen uit een zwart gat?
+            </p>
+
+            <button onclick="antwoord(false, 'resultaat1', this)">
+                A. Omdat licht daar bevriest
+            </button>
+
+            <button onclick="antwoord(true, 'resultaat1', this); verdienPunten(10, 'zwarte-gaten-vraag-1')">
+                B. Omdat de ruimtetijd zo sterk gekromd is dat er geen weg naar buiten is
+            </button>
+
+            <button onclick="antwoord(false, 'resultaat1', this)">
+                C. Omdat er geen licht bestaat in de ruimte
+            </button>
+
+            <p id="resultaat1"></p>
+
+        </div>
+
+
+        <!-- VRAAG 2 -->
+
+        <div class="vraag">
+
+            <h3>Vraag 2</h3>
+
+            <p>
+                Hoe heet de grens rond een zwart gat waar niets meer kan ontsnappen?
+            </p>
+
+            <button onclick="antwoord(false, 'resultaat2', this)">
+                A. De lichtmuur
+            </button>
+
+            <button onclick="antwoord(true, 'resultaat2', this); verdienPunten(10, 'zwarte-gaten-vraag-2')">
+                B. De waarnemingshorizon
+            </button>
+
+            <button onclick="antwoord(false, 'resultaat2', this)">
+                C. De zwaartekrachtgrens
+            </button>
+
+            <p id="resultaat2"></p>
+
+        </div>
+
+    </div>
+
+
+    <br><br>
+
+    <a href="ruimtevaart.html" class="start-knop">
+        ← Terug naar Ruimtevaart
+    </a>
+
+</section>
+
+</main>
+
+
+<script src="punten.js"></script>
+
+</body>
+</html>

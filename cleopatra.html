@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleopatra — Ontdek</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ONTDEK</div>
+    <div class="punten">
+    <span id="puntenTeller">⭐ 0 punten</span>
+    <span id="levelTeller">🌱 Nieuwsgierig</span>
+</div>
+
+<div id="puntenTeller">⭐ 0 punten</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="ruimtevaart.html">Ruimtevaart</a>
+        <a href="geschiedenis.html">Geschiedenis</a>
+        <a href="wetenschap.html">Wetenschap</a>
+    </nav>
+</header>
+
+<main>
+
+<section class="hero">
+
+    <p class="boven-titel">GESCHIEDENIS — LES 03</p>
+
+    <h1>Cleopatra:<br><span>koningin van Egypte.</span></h1>
+
+    <p class="intro">
+        Cleopatra VII was de laatste actieve heerser van het
+        Ptolemeïsche Egypte en speelde een belangrijke rol
+        in de Romeinse machtsstrijd.
+    </p>
+
+</section>
+
+<section class="onderwerpen">
+
+<div class="les-tekst">
+
+    <h3>👑 Een bijzondere koningin</h3>
+
+    <p>
+        Cleopatra VII werd geboren in 69 voor Christus.
+        Ze werd koningin van Egypte in een periode waarin
+        Rome steeds meer macht kreeg in de Middellandse Zee.
+    </p>
+
+    <h3>🏛️ Egypte en Rome</h3>
+
+    <p>
+        Cleopatra werkte samen met Julius Caesar en later
+        met Marcus Antonius. Hierdoor raakte Egypte sterk
+        verbonden met de Romeinse politiek.
+    </p>
+
+    <h3>🧠 Cleopatra was politiek zeer actief</h3>
+
+    <p>
+        Cleopatra was niet alleen een koningin die afhankelijk
+        was van Romeinse leiders. Ze probeerde actief de
+        onafhankelijkheid en macht van Egypte te behouden.
+    </p>
+
+    <h3>⚔️ Het einde</h3>
+
+    <p>
+        Cleopatra en Marcus Antonius werden verslagen door
+        Octavianus. In 30 voor Christus kwam Cleopatra om het leven.
+        Egypte werd daarna onderdeel van het Romeinse Rijk.
+    </p>
+
+</div>
+
+<div class="sectie-titel quiz-titel">
+    <p>QUIZ</p>
+    <h2>De moeilijke<br>vragen.</h2>
+</div>
+
+<div class="quiz">
+
+    <h3>Vraag 1</h3>
+
+    <p>
+        Met welke Romeinse leider kreeg Cleopatra een zoon?
+    </p>
+
+    <button onclick="antwoord(true, 'r1', this)">
+        A. Julius Caesar
+    </button>
+
+    <button onclick="antwoord(false, 'r1', this)">
+        B. Nero
+    </button>
+
+    <button onclick="antwoord(false, 'r1', this)">
+        C. Augustus
+    </button>
+
+    <p id="r1"></p>
+
+    <h3>Vraag 2</h3>
+
+    <p>
+        Wie versloeg Cleopatra en Marcus Antonius?
+    </p>
+
+    <button onclick="antwoord(false, 'r2', this)">
+        A. Julius Caesar
+    </button>
+
+    <button onclick="antwoord(true, 'r2', this); verdienPunten(10)">
+        B. Octavianus
+    </button>
+
+    <button onclick="antwoord(false, 'r2', this)">
+        C. Nero
+    </button>
+
+    <p id="r2"></p>
+
+</div>
+
+<br><br>
+
+<a href="geschiedenis.html" class="start-knop">
+    ← Terug naar Geschiedenis
+</a>
+
+</section>
+
+</main>
+
+<script>
+function antwoord(goed, id, knop) {
+
+    const resultaat = document.getElementById(id);
+
+    if (resultaat.dataset.beantwoord === "true") {
+        return;
+    }
+
+    resultaat.dataset.beantwoord = "true";
+
+    const knoppen = knop.parentElement.querySelectorAll("button");
+
+    knoppen.forEach(function (button) {
+        button.disabled = true;
+    });
+
+    if (goed) {
+        resultaat.textContent = "✓ Juist. +10 punten!";
+    } else {
+        resultaat.textContent = "✗ Nope. Geen punten.";
+    }
+}
+
+
+</script>
+
+<script src="punten.js"></script>
+
+</body>
+</html>

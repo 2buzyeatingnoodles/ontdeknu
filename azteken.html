@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azteken — Ontdek</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ONTDEK</div>
+
+    <div class="punten">
+    <span id="puntenTeller">⭐ 0 punten</span>
+    <span id="levelTeller">🌱 Nieuwsgierig</span>
+</div>
+
+<div id="puntenTeller">⭐ 0 punten</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="ruimtevaart.html">Ruimtevaart</a>
+        <a href="geschiedenis.html">Geschiedenis</a>
+        <a href="wetenschap.html">Wetenschap</a>
+    </nav>
+</header>
+
+<main>
+
+<section class="hero">
+
+    <p class="boven-titel">GESCHIEDENIS — LES 01</p>
+
+    <h1>De Azteken:<br><span>een machtig rijk.</span></h1>
+
+    <p class="intro">
+        Een rijk met enorme steden, indrukwekkende tempels
+        en een complexe samenleving in Meso-Amerika.
+    </p>
+
+</section>
+
+<section class="onderwerpen">
+
+<div class="les-tekst">
+
+    <h3>🏙️ Tenochtitlan</h3>
+
+    <p>
+        De hoofdstad van het Azteekse Rijk was Tenochtitlan.
+        De stad lag op een eiland in het Texcocomeer, op de plek
+        waar tegenwoordig Mexico-Stad ligt.
+    </p>
+
+    <p>
+        Tenochtitlan was enorm voor zijn tijd en had tempels,
+        markten, wegen en kanalen.
+    </p>
+
+    <h3>🌽 Een georganiseerde samenleving</h3>
+
+    <p>
+        De Azteken bouwden een samenleving waarin landbouw,
+        handel, religie en oorlog een belangrijke rol speelden.
+    </p>
+
+    <h3>⚔️ Hoe eindigde het rijk?</h3>
+
+    <p>
+        In 1519 arriveerde Hernán Cortés met Spaanse troepen
+        in Meso-Amerika. De Spanjaarden kregen hulp van verschillende
+        volken die vijanden van de Azteken waren.
+    </p>
+
+    <p>
+        In 1521 viel Tenochtitlan en kwam het Azteekse rijk
+        grotendeels ten einde.
+    </p>
+
+    <h3>🧠 Belangrijk om te onthouden</h3>
+
+    <p>
+        De Azteken waren niet simpelweg een "primitieve" beschaving.
+        Ze hadden uitgebreide landbouwsystemen, handel, bestuur,
+        architectuur en kennis van astronomie en tijdrekening.
+    </p>
+
+</div>
+
+<div class="sectie-titel quiz-titel">
+    <p>QUIZ</p>
+    <h2>Hoeveel weet<br>jij van de Azteken?</h2>
+</div>
+
+<div class="quiz" let punten = Number(localStorage.getItem("ontdekPunten")) || 0;
+
+
+
+function antwoord(goed, id, knop) {
+
+    const resultaat = document.getElementById(id);
+
+    if (resultaat.dataset.beantwoord === "true") {
+        return;
+    }
+
+    resultaat.dataset.beantwoord = "true";
+
+    // Alleen de knoppen van DEZE vraag uitschakelen
+    const vraag = knop.closest(".vraag");
+
+    if (vraag) {
+        const knoppen = vraag.querySelectorAll("button");
+
+        knoppen.forEach(function(button) {
+            button.disabled = true;
+        });
+    }
+
+    if (goed) {
+        resultaat.textContent = "✓ Juist! +10 punten.";
+    } else {
+        resultaat.textContent = "✗ Helaas! Geen punten.";
+    }
+}
+
+
+updatePunten();>
+
+    <h3>Vraag 1</h3>
+
+    <p>Waar lag Tenochtitlan?</p>
+
+    <button onclick="antwoord(true, 'r1', this); verdienPunten(10)">
+        A. Op een eiland in het Texcocomeer
+    </button>
+
+    <button onclick="antwoord(false, 'r1', this)">
+        B. In het midden van de Sahara
+    </button>
+
+    <button onclick="antwoord(false, 'r1', this)">
+        C. Aan de kust van Spanje
+    </button>
+
+    <p id="r1"></p>
+
+    <h3>Vraag 2</h3>
+
+    <p>In welk jaar viel Tenochtitlan?</p>
+
+    <button onclick="antwoord(false, 'r2', this)">
+        A. 1066
+    </button>
+
+    <button onclick="antwoord(true, 'r2', this)">
+        B. 1521
+    </button>
+
+    <button onclick="antwoord(false, 'r2', this)">
+        C. 1789
+    </button>
+
+    <p id="r2"></p>
+
+</div>
+
+<br><br>
+
+<a href="geschiedenis.html" class="start-knop">
+    ← Terug naar Geschiedenis
+</a>
+
+</section>
+
+</main>
+
+<script>
+function antwoord(goed, id) {
+    function antwoord(goed, id, knop) {
+
+    const resultaat = document.getElementById(id);
+
+    if (resultaat.dataset.beantwoord === "true") {
+        return;
+    }
+
+    resultaat.dataset.beantwoord = "true";
+
+    const knoppen = knop.parentElement.querySelectorAll("button");
+
+    knoppen.forEach(function (button) {
+        button.disabled = true;
+    });
+
+    if (goed) {
+        resultaat.textContent = "✓ Juist. +10 punten!";
+    } else {
+        resultaat.textContent = "✗ Nope. Geen punten.";
+    }
+
+}
+</script>
+
+ <script src="punten.js"></script>
+
+</body>
+</html>              

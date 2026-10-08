@@ -1,0 +1,122 @@
+```html
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Neutronensterren — Ontdek</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <a href="index.html" class="logo">ONTDEK</a>
+
+        <nav>
+            <a href="ruimtevaart.html">Ruimtevaart</a>
+            <a href="geschiedenis.html">Geschiedenis</a>
+            <a href="wetenschap.html">Wetenschap</a>
+        </nav>
+
+        <div class="punten">
+            <span id="puntenTeller">⭐ 0 punten</span>
+            <span id="levelTeller">🌱 Nieuwsgierig</span>
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="onderwerpen">
+
+            <div class="sectie-titel">
+                <p>RUIMTEVAART — LES 04</p>
+
+                <h1>🌌 Neutronensterren</h1>
+            </div>
+
+            <div class="les-tekst">
+
+                <h3>Een ster zo klein als een stad</h3>
+
+                <p>
+                    Wanneer een zware ster aan het einde van zijn leven ontploft,
+                    kan er een extreem compacte kern achterblijven.
+                    Dit noemen we een neutronenster.
+                </p>
+
+                <p>
+                    Een neutronenster kan ongeveer dezelfde massa hebben als onze
+                    zon, maar slechts ongeveer 20 kilometer breed zijn.
+                    Dat betekent dat hij ongelooflijk dicht is.
+                </p>
+
+                <p>
+                    Sommige neutronensterren draaien honderden keren per seconde.
+                    Deze kunnen straling uitzenden als een soort kosmische vuurtoren.
+                    Zulke neutronensterren noemen we pulsars.
+                </p>
+
+                <h3>⚡ In 1 minuut geleerd</h3>
+
+                <p>
+                    🌟 Ontstaat na een supernova<br>
+                    🏙️ Kan ongeveer zo groot zijn als een stad<br>
+                    ☀️ Kan ongeveer de massa van de zon hebben<br>
+                    🔄 Sommige draaien honderden keren per seconde<br>
+                    📡 Sommige zijn pulsars
+                </p>
+
+            </div>
+
+            <div class="quiz">
+
+                <h3>🧠 Quiz</h3>
+
+                <p>
+                    Hoe ontstaat een neutronenster?
+                </p>
+
+                <div class="vraag">
+
+                    <button onclick="antwoord(false, 'resultaat4', this)">
+                        A. Door twee planeten die botsen
+                    </button>
+
+                    <button onclick="antwoord(true, 'resultaat4', this); verdienPunten(10, 'neutronenster-quiz')">
+                        B. Door de overgebleven kern van een zware ster na een supernova
+                    </button>
+
+                    <button onclick="antwoord(false, 'resultaat4', this)">
+                        C. Doordat een planeet steeds kleiner wordt
+                    </button>
+
+                    <p id="resultaat4"></p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <strong>ONTDEK</strong>
+
+        <p>Leer iets. Begrijp meer.</p>
+
+    </footer>
+
+    <script src="punten.js"></script>
+
+</body>
+
+</html>
+

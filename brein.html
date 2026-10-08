@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Het brein — Ontdek</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">ONTDEK</div>
+        <div class="punten">
+    <span id="puntenTeller">⭐ 0 punten</span>
+    <span id="levelTeller">🌱 Nieuwsgierig</span>
+</div>
+
+<div id="puntenTeller">⭐ 0 punten</div>
+
+        <nav>
+            <a href="ruimtevaart.html">Ruimtevaart</a>
+            <a href="geschiedenis.html">Geschiedenis</a>
+            <a href="wetenschap.html">Wetenschap</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <p class="boven-titel">WETENSCHAP — LES 02</p>
+
+            <h1>Je brein:<br><span>vreemder dan je denkt.</span></h1>
+
+            <p class="intro">
+                Je hersenen besturen bijna alles wat je doet.
+                Maar sommige dingen die ze doen zijn behoorlijk bizar.
+            </p>
+
+        </section>
+
+
+        <section class="onderwerpen">
+
+            <div class="les-tekst">
+
+                <p class="boven-titel">WIST JE DIT?</p>
+
+
+                <h3>🧠 Je brein voelt zelf geen pijn</h3>
+
+                <p>
+                    Je hersenen verwerken pijnsignalen uit de rest van je lichaam,
+                    maar het hersenweefsel zelf heeft geen pijnreceptoren.
+                    Daarom kan het brein pijn verwerken zonder die pijn zelf te voelen.
+                </p>
+
+
+                <h3>⚡ Je brein gebruikt verrassend veel energie</h3>
+
+                <p>
+                    Je hersenen zijn maar een klein deel van je lichaamsgewicht,
+                    maar gebruiken ongeveer <strong>20% van de energie</strong>
+                    die je lichaam in rust verbruikt.
+                </p>
+
+
+                <h3>👀 Je brein kan je voor de gek houden</h3>
+
+                <p>
+                    Wat je ziet is niet simpelweg een perfecte kopie van de wereld.
+                    Je brein verwerkt signalen uit je ogen en maakt daar razendsnel
+                    een beeld van.
+                </p>
+
+                <p>
+                    Daarom kunnen optische illusies je hersenen soms compleet
+                    in de war brengen.
+                </p>
+
+
+                <h3>😴 Je brein blijft actief terwijl je slaapt</h3>
+
+                <p>
+                    Tijdens je slaap gaat je brein niet gewoon uit.
+                    Het blijft actief en verwerkt onder andere informatie,
+                    herinneringen en verschillende signalen uit je lichaam.
+                </p>
+
+
+                <h3>💭 Je kunt jezelf moeilijk verrassen</h3>
+
+                <p>
+                    Je brein voorspelt voortdurend wat er gaat gebeuren.
+                    Daardoor reageren we anders op iets dat we zelf veroorzaken
+                    dan op iets onverwachts van buitenaf.
+                </p>
+
+
+                <h3>🧠 Je brein verandert</h3>
+
+                <p>
+                    Je hersenen zijn niet volledig hetzelfde gedurende je leven.
+                    Verbindingen tussen zenuwcellen kunnen sterker worden,
+                    verzwakken of veranderen.
+                </p>
+
+                <p>
+                    Daarom kunnen leren en oefenen je hersenen daadwerkelijk
+                    veranderen.
+                </p>
+
+            </div>
+
+
+            <div class="quiz">
+
+                <h3>🔥 Hoe goed heb je opgelet?</h3>
+
+                <p>
+                    <strong>Vraag 1:</strong> Voelt het hersenweefsel zelf pijn?
+                </p>
+
+                <button onclick="antwoord(true, 'r1', this, 'brein-vraag-1')">
+                    A — Nee
+                </button>
+
+                <button onclick="antwoord(false, 'r1', this)">
+                    B — Ja, heel sterk
+                </button>
+
+                <button onclick="antwoord(false, 'r1', this)">
+                    C — Alleen tijdens het slapen
+                </button>
+
+                <p id="r1"></p>
+
+
+                <p>
+                    <strong>Vraag 2:</strong> Wat gebeurt er met je brein
+                    tijdens je slaap?
+                </p>
+
+                <button onclick="antwoord(false, 'r2', this)">
+                    A — Het stopt volledig
+                </button>
+
+                <button onclick="antwoord(true, 'r2', this, 'brein-vraag-2'); verdienPunten(10)">
+                    B — Het blijft actief
+                </button>
+
+                <button onclick="antwoord(false, 'r2', this)">
+                    C — Het werkt alleen als je droomt
+                </button>
+
+                <p id="r2"></p>
+
+            </div>
+
+
+            <br><br>
+
+            <a href="wetenschap.html" class="start-knop">
+                ← Terug naar wetenschap
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <strong>ONTDEK</strong>
+        <p>Leer iets. Begrijp meer.</p>
+    </footer>
+
+
+    <script>
+
+        function antwoord(goed, id, knop) {
+
+    const resultaat = document.getElementById(id);
+
+    if (resultaat.dataset.beantwoord === "true") {
+        return;
+    }
+
+    resultaat.dataset.beantwoord = "true";
+
+    const knoppen = knop.parentElement.querySelectorAll("button");
+
+    knoppen.forEach(function (button) {
+        button.disabled = true;
+    });
+
+    if (goed) {
+        resultaat.textContent = "✓ Juist. +10 punten!";
+    } else {
+        resultaat.textContent = "✗ Nope. Geen punten.";
+    }
+}
+
+    </script>
+
+    <script src="punten.js"></script>
+
+</body>
+</html>

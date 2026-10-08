@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kometen — Ontdek</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ONTDEK</div>
+
+<div id="puntenTeller">⭐ 0 punten</div>
+<div class="punten">
+    <span id="puntenTeller">⭐ 0 punten</span>
+    <span id="levelTeller">🌱 Nieuwsgierig</span>
+</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="ruimtevaart.html">Ruimtevaart</a>
+        <a href="geschiedenis.html">Geschiedenis</a>
+        <a href="wetenschap.html">Wetenschap</a>
+    </nav>
+</header>
+
+<main>
+
+<section class="hero">
+    <p class="boven-titel">RUIMTEVAART — LES 03</p>
+
+    <h1>Kometen:<br><span>reizigers uit de kou.</span></h1>
+
+    <p class="intro">
+        Ze komen uit de donkere buitengebieden van ons zonnestelsel
+        en kunnen een spectaculaire staart krijgen.
+    </p>
+</section>
+
+<section class="onderwerpen">
+
+    <div class="sectie-titel">
+        <p>DE LES</p>
+        <h2>Een kosmische<br>ijsbal.</h2>
+    </div>
+
+    <div class="les-tekst">
+
+        <h3>🧊 Waaruit bestaat een komeet?</h3>
+
+        <p>
+            Een komeet bestaat voornamelijk uit een mengsel van ijs,
+            stof en gesteente.
+        </p>
+
+        <p>
+            De vaste kern van een komeet wordt de
+            <strong>nucleus</strong> genoemd.
+        </p>
+
+        <h3>☀️ Wat gebeurt er bij de zon?</h3>
+
+        <p>
+            Wanneer een komeet dichter bij de zon komt, warmt het oppervlak op.
+            IJs kan rechtstreeks overgaan van een vaste naar een gasvormige
+            toestand.
+        </p>
+
+        <p>
+            Hierdoor ontstaat rond de kern een wolk van gas en stof:
+            de <strong>coma</strong>.
+        </p>
+
+        <h3>💨 Waarom heeft een komeet een staart?</h3>
+
+        <p>
+            Zonlicht en de zonnewind kunnen materiaal van de komeet wegduwen.
+            Daardoor ontstaat een staart die van de zon af wijst.
+        </p>
+
+        <p>
+            Een komeet kan zelfs twee soorten staarten hebben:
+            een stofstaart en een ionenstaart.
+        </p>
+
+        <h3>🌌 Waar komen kometen vandaan?</h3>
+
+        <p>
+            Veel kometen hebben hun oorsprong in de koude buitengebieden
+            van het zonnestelsel, zoals de Kuipergordel en de veel verder
+            gelegen Oortwolk.
+        </p>
+
+    </div>
+
+    <div class="sectie-titel quiz-titel">
+        <p>QUIZ</p>
+        <h2>Test je kennis.</h2>
+    </div>
+
+    <div class="quiz">
+
+        <h3>Vraag 1</h3>
+
+        <p>Waaruit bestaat een komeet voornamelijk?</p>
+
+        <button onclick="antwoord(true, 'resultaat1', this); verdienPunten(10)">
+            A. IJs, stof en gesteente
+        </button>
+
+        <button onclick="antwoord(false, 'resultaat1', this)">
+            B. Alleen vloeibaar water
+        </button>
+
+        <button onclick="antwoord(false, 'resultaat1', this)">
+            C. Alleen gas
+        </button>
+
+        <p id="resultaat1"></p>
+
+        <h3>Vraag 2</h3>
+
+        <p>In welke richting wijst de staart van een komeet meestal?</p>
+
+        <button onclick="antwoord(false, 'resultaat2', this)">
+            A. Altijd richting de zon
+        </button>
+
+        <button onclick="antwoord(true, 'resultaat2', this)">
+            B. Van de zon af
+        </button>
+
+        <button onclick="antwoord(false, 'resultaat2', this)">
+            C. Altijd richting de aarde
+        </button>
+
+        <p id="resultaat2"></p>
+
+    </div>
+
+    <br><br>
+
+    <a href="ruimtevaart.html" class="start-knop">
+        ← Terug naar Ruimtevaart
+    </a>
+
+</section>
+
+</main>
+
+<script>
+function antwoord(goed, id, knop) {
+
+    const resultaat = document.getElementById(id);
+
+    if (resultaat.dataset.beantwoord === "true") {
+        return;
+    }
+
+    resultaat.dataset.beantwoord = "true";
+
+    const knoppen = knop.parentElement.querySelectorAll("button");
+
+    knoppen.forEach(function (button) {
+        button.disabled = true;
+    });
+
+    if (goed) {
+        resultaat.textContent = "✓ Juist. +10 punten!";
+    } else {
+        resultaat.textContent = "✗ Nope. Geen punten.";
+    }
+}function antwoord(goed, id, knop) {
+
+    const resultaat = document.getElementById(id);
+
+    if (resultaat.dataset.beantwoord === "true") {
+        return;
+    }
+
+    resultaat.dataset.beantwoord = "true";
+
+    const knoppen = knop.parentElement.querySelectorAll("button");
+
+    knoppen.forEach(function (button) {
+        button.disabled = true;
+    });
+
+    if (goed) {
+        resultaat.textContent = "✓ Juist. +10 punten!";
+    } else {
+        resultaat.textContent = "✗ Nope. Geen punten.";
+    }
+}
+</script>
+
+<script src="punten.js"></script>
+
+</body>
+</html>

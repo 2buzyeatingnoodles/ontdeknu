@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venus — Ontdek</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ONTDEK</div>
+    <div class="punten">
+    <span id="puntenTeller">⭐ 0 punten</span>
+    <span id="levelTeller">🌱 Nieuwsgierig</span>
+</div>
+
+<div id="puntenTeller">⭐ 0 punten</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="ruimtevaart.html">Ruimtevaart</a>
+        <a href="geschiedenis.html">Geschiedenis</a>
+        <a href="wetenschap.html">Wetenschap</a>
+    </nav>
+</header>
+
+<main>
+
+<section class="hero">
+    <p class="boven-titel">RUIMTEVAART — LES 01</p>
+
+    <h1>Venus:<br><span>de hel naast de aarde.</span></h1>
+
+    <p class="intro">
+        Venus lijkt op de aarde, maar is één van de meest extreme
+        planeten van ons zonnestelsel.
+    </p>
+</section>
+
+<section class="onderwerpen">
+
+    <div class="sectie-titel">
+        <p>DE LES</p>
+        <h2>Een planeet<br>vol extremen.</h2>
+    </div>
+
+    <div class="les-tekst">
+
+        <h3>🔥 465 °C</h3>
+
+        <p>
+            Venus heeft een gemiddelde oppervlaktetemperatuur van ongeveer
+            <strong>465 °C</strong>. Dat maakt Venus zelfs heter dan Mercurius,
+            ondanks het feit dat Mercurius dichter bij de zon staat.
+        </p>
+
+        <h3>☁️ Een verstikkende atmosfeer</h3>
+
+        <p>
+            De atmosfeer van Venus bestaat voornamelijk uit koolstofdioxide.
+            Hierdoor ontstaat een extreem sterk broeikaseffect.
+        </p>
+
+        <p>
+            De luchtdruk aan het oppervlak is ongeveer <strong>90 keer</strong>
+            zo hoog als op aarde.
+        </p>
+
+        <h3>🧪 Zwavelzuur</h3>
+
+        <p>
+            Hoog in de atmosfeer hangen wolken waarin zwavelzuur voorkomt.
+            De omstandigheden zijn daardoor bijzonder vijandig voor leven
+            zoals wij dat kennen.
+        </p>
+
+        <h3>🛰️ Waarom onderzoeken we Venus?</h3>
+
+        <p>
+            Venus lijkt qua grootte en samenstelling op de aarde.
+            Door Venus te onderzoeken proberen wetenschappers beter te
+            begrijpen waarom de aarde leefbaar is geworden en Venus niet.
+        </p>
+
+    </div>
+
+    <div class="sectie-titel quiz-titel">
+        <p>QUIZ</p>
+        <h2>Test je kennis.</h2>
+    </div>
+
+    <div class="quiz">
+
+        <h3>Vraag 1</h3>
+
+        <p>Waarom is Venus zo heet?</p>
+
+        <button onclick="antwoord(false, 'resultaat1', this)">
+            A. Omdat Venus het dichtst bij de zon staat
+        </button>
+
+        <button onclick="antwoord(true, 'resultaat1', this)">
+            B. Door het extreem sterke broeikaseffect
+        </button>
+
+        <button onclick="antwoord(false, 'resultaat1', this)">
+            C. Omdat Venus van lava is gemaakt
+        </button>
+
+        <p id="resultaat1"></p>
+
+        <h3>Vraag 2</h3>
+
+        <p>Waaruit bestaat het grootste deel van de atmosfeer van Venus?</p>
+
+        <button onclick="antwoord(true, 'resultaat2', this); verdienPunten(10)">
+            A. Koolstofdioxide
+        </button>
+
+        <button onclick="antwoord(false, 'resultaat2', this)">
+            B. Zuurstof
+        </button>
+
+        <button onclick="antwoord(false, 'resultaat2', this)">
+            C. Waterstof
+        </button>
+
+        <p id="resultaat2"></p>
+
+    </div>
+
+    <br><br>
+
+    <a href="ruimtevaart.html" class="start-knop">
+        ← Terug naar Ruimtevaart
+    </a>
+
+</section>
+
+</main>
+
+<script>
+function antwoord(goed, id, knop) {
+
+    const resultaat = document.getElementById(id);
+
+    if (resultaat.dataset.beantwoord === "true") {
+        return;
+    }
+
+    resultaat.dataset.beantwoord = "true";
+
+    const knoppen = knop.parentElement.querySelectorAll("button");
+
+    knoppen.forEach(function (button) {
+        button.disabled = true;
+    });
+
+    if (goed) {
+        resultaat.textContent = "✓ Juist. +10 punten!";
+    } else {
+        resultaat.textContent = "✗ Nope. Geen punten.";
+    }
+}
+</script>
+
+<script src="punten.js"></script>
+
+</body>
+</html>

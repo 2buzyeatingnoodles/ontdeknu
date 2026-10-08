@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumeriërs — Ontdek</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ONTDEK</div>
+    <div class="punten">
+    <span id="puntenTeller">⭐ 0 punten</span>
+    <span id="levelTeller">🌱 Nieuwsgierig</span>
+</div>
+
+<div id="puntenTeller">⭐ 0 punten</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="ruimtevaart.html">Ruimtevaart</a>
+        <a href="geschiedenis.html">Geschiedenis</a>
+        <a href="wetenschap.html">Wetenschap</a>
+    </nav>
+</header>
+
+<main>
+
+<section class="hero">
+
+    <p class="boven-titel">GESCHIEDENIS — LES 02</p>
+
+    <h1>De Sumeriërs:<br><span>waar steden begonnen.</span></h1>
+
+    <p class="intro">
+        Eén van de oudste bekende stedelijke beschavingen ontstond
+        duizenden jaren geleden in Mesopotamië.
+    </p>
+
+</section>
+
+<section class="onderwerpen">
+
+<div class="les-tekst">
+
+    <h3>🏺 Mesopotamië</h3>
+
+    <p>
+        De Sumeriërs leefden in het zuiden van Mesopotamië,
+        in het gebied tussen de rivieren de Eufraat en de Tigris.
+    </p>
+
+    <h3>🏙️ De eerste steden</h3>
+
+    <p>
+        Sumerië bestond uit verschillende stadstaten,
+        waaronder Uruk, Ur en Lagash.
+    </p>
+
+    <p>
+        Uruk groeide uit tot een van de grootste steden
+        van de oude wereld.
+    </p>
+
+    <h3>✍️ Het spijkerschrift</h3>
+
+    <p>
+        De Sumeriërs ontwikkelden een van de vroegst bekende
+        schrijfsystemen: het <strong>spijkerschrift</strong>.
+    </p>
+
+    <p>
+        Ze drukten tekens met een rietstift in zachte kleitabletten.
+        Daarmee konden ze bijvoorbeeld handel, belastingen en
+        voorraden bijhouden.
+    </p>
+
+    <h3>🧠 Meer dan alleen schrijven</h3>
+
+    <p>
+        De Sumeriërs hielden zich ook bezig met wiskunde,
+        sterrenkunde, landbouw en bestuur.
+    </p>
+
+</div>
+
+<div class="sectie-titel quiz-titel">
+    <p>QUIZ</p>
+    <h2>Test je kennis.</h2>
+</div>
+
+<div class="quiz">
+
+    <h3>Vraag 1</h3>
+
+    <p>Waar leefden de Sumeriërs?</p>
+
+    <button onclick="antwoord(true, 'r1', this, 'sumeriers-vraag-1'); verdienPunten(10)">
+        A. In Mesopotamië
+    </button>
+
+    <button onclick="antwoord(false, 'r1', this)">
+        B. In Scandinavië
+    </button>
+
+    <button onclick="antwoord(false, 'r1', this)">
+        C. In Zuid-Amerika
+    </button>
+
+    <p id="r1"></p>
+
+    <h3>Vraag 2</h3>
+
+    <p>Waarvoor werd het spijkerschrift onder andere gebruikt?</p>
+
+    <button onclick="antwoord(false, 'r2', this)">
+        A. Alleen voor gedichten
+    </button>
+
+    <button onclick="antwoord(true, 'r2', this, 'sumeriers-vraag-2')">
+        B. Voor administratie en het vastleggen van informatie
+    </button>
+
+    <button onclick="antwoord(false, 'r2', this)">
+        C. Alleen voor kaarten
+    </button>
+
+    <p id="r2"></p>
+
+</div>
+
+<br><br>
+
+<a href="geschiedenis.html" class="start-knop">
+    ← Terug naar Geschiedenis
+</a>
+
+</section>
+
+</main>
+
+<script>
+function antwoord(goed, id, knop) {
+
+    const resultaat = document.getElementById(id);
+
+    if (resultaat.dataset.beantwoord === "true") {
+        return;
+    }
+
+    resultaat.dataset.beantwoord = "true";
+
+    const knoppen = knop.parentElement.querySelectorAll("button");
+
+    knoppen.forEach(function (button) {
+        button.disabled = true;
+    });
+
+    if (goed) {
+        resultaat.textContent = "✓ Juist. +10 punten!";
+    } else {
+        resultaat.textContent = "✗ Nope. Geen punten.";
+    }
+}
+
+
+</script>
+
+<script src="punten.js"></script>
+
+</body>
+</html>
